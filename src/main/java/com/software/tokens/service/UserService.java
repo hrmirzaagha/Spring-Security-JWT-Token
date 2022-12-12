@@ -2,6 +2,8 @@ package com.software.tokens.service;
 
 import com.software.tokens.model.User;
 import jakarta.transaction.Transactional;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -14,6 +16,11 @@ public class UserService implements GeneralService<User>{
     @Override
     public Optional<List<User>> selectAll() {
         return Optional.empty();
+    }
+
+    @Override
+    public Page<User> selectAll(Pageable pageable) {
+        return null;
     }
 
     @Override
