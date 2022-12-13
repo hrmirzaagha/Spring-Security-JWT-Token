@@ -12,12 +12,12 @@ public abstract class GeneralController<T> {
 
     public abstract ResponseEntity<Response> select(Pageable pageable);
 
-    public abstract ResponseEntity<Response> selectById(@PathVariable(value = "id") Long id);
+    public abstract ResponseEntity<Response> selectById(Long id);
 
-    public abstract ResponseEntity<Response> saveOrUpdate(@RequestBody T t);
+    public abstract ResponseEntity<Response> saveOrUpdate(T t);
 
-    public abstract ResponseEntity<Response> delete(@PathVariable(value = "id") Long id);
+    public abstract ResponseEntity<Response> delete(Long id);
 
-    public abstract ResponseEntity<Response> delete(@RequestBody T t);
+    public abstract ResponseEntity<Response> delete(T t);
 
 }

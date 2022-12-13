@@ -25,15 +25,15 @@ public class UserController extends GeneralController<User> {
         return null;
     }
 
-    @GetMapping
+    @GetMapping("/page")
     @Override
     public ResponseEntity<Response> select(Pageable pageable) {
         return null;
     }
 
-    @GetMapping
+    @GetMapping("/{id}")
     @Override
-    public ResponseEntity<Response> selectById(Long id) {
+    public ResponseEntity<Response> selectById(@PathVariable(value = "id") Long id) {
         return null;
     }
 
@@ -52,7 +52,7 @@ public class UserController extends GeneralController<User> {
 
     @DeleteMapping("/{id}")
     @Override
-    public ResponseEntity<Response> delete(Long id) {
+    public ResponseEntity<Response> delete(@PathVariable(value = "id") Long id) {
         return null;
     }
 
