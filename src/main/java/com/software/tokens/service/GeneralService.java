@@ -8,16 +8,16 @@ import java.util.Optional;
 
 public interface GeneralService<T> {
 
-    Optional<List<T>> selectAll();
+    List<T> selectAll();
 
     Page<T> selectAll(Pageable pageable);
 
-    Optional<T> selectById(Long id);
+    T selectById(Long id);
 
     T saveOrUpdate(T t);
 
-    Long delete(Long id);
+    void delete(Long id);
 
-    Long delete(T t);
+    void delete(T t);
 
 }
